@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+title{
+  display: none;
+}
+
+body{
+  font-family: "Open Sans", Arial, sans-serif;
+  background: #fafafa;
+  min-height: 100vh;
+  color: #262626;
+  padding-bottom: 3rem;
+}
+.container{
+  max-width: 93.5rem;
+  margin: 5% auto;
+  padding: .2rem;
+
+}
+.btn{
+  display: inline-block;
+  background: none;
+  border:none;
+  cursor: pointer;
+}
+
+.btn:focus{
+  outline: .5rem auto #4d90fa;
+}
+
+.profile{
+  padding:  5rem 0;
+}
+
+.profile-image{
+  float:left;
+  width:calc(33.333% - 2rem);
+  height:calc(33.333% - 2rem);
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.profile-image img{
+  border-radius: 50%;
+}
+
+.profile-user-settings,
+.profile-stats,
+.profile-bio{
+  float: left;
+  width: calc(66,666% - 2rem);
+}
+
+.profile-user-settings{
+    margin-top:  1.1rem;
+}
+.profile-user-name{
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.profile-edit-btn{
+  font-size: 1.4rem;
+  line-height: 1.8;
+  border: .1rem solid #dbdbdb;
+  border-radius: .3rem
+  padding: 0 2.4rem;
+  margin-left: 2rem;
+}
+
+.profile-settings-btn{
+  font-size: 2rem;
+  margin-left: 1rem;
+}
