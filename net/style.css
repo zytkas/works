@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+title{
+  display: none;
+}
+body
+{
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Oswald", sans-serif;
+}
+#menuToggle{
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  user-select: none;
+}
+#menuToggle a{
+  text-decoration: none;
+  color: orange;
+  transition: color 0.215s ease;
+}
+#menuToggle a:hover{
+  color: #CC3300;
+}
+#menuToggle input{
+width: 40px;
+height: 32px;
+position: absolute;
+top: -7px;
+left: -5px;
+cursor: pointer;
+z-index: 2;
+opacity: 0;
+}
+#menuToggle span{
+  width: 33px;
+  height: 4px;
+  background: #00ff00;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform .7s cubic-bezier(.77, .2, .05, 1), background .5s cubic-bezier(.77, .2, .05, 1),
+  opacity .55s ease;
+}
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-child(2){
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-4px, -2px);
+  background: #FF6600;
+}
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0) scale(.2, .2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu{
+  position: absolute;
+  width: 170px;
+  background: rgba(204, 204, 255, 0.3);
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  transform-origin: 0% 0%;
+  transform: translate(-100%,0);
+  transition: transform .5s cubic-bezier(.77, .2, .05, 1);
+}
+#menuToggle  input:checked ~ ul{
+  transform: none;
+}
+#menu li{
+  padding: 10px 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+footer{
+  position: absolute;
+  bottom: 15px;
+}
