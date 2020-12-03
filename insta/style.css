@@ -50,6 +50,14 @@ body{
 
 .profile-image img{
   border-radius: 50%;
+ background:
+     linear-gradient(#fff,#fff) padding-box,
+     linear-gradient(to right, #FFA500, #fb3570) border-box;
+    color: transparent;
+    padding:10px;
+    border: .3rem solid transparent;
+    display:inline-block;
+    margin: 75px 0;
 }
 
 .profile-user-settings,
@@ -80,4 +88,68 @@ body{
 .profile-settings-btn{
   font-size: 2rem;
   margin-left: 1rem;
+
+}
+
+.profile-stats{
+  margin-top: 2.5rem;
+  position: absolute;
+  top:34%;
+  left: 37%
+}
+.profile-stats li{
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+
+.profile-bio{
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 2.3rem;
+  position: absolute;
+  left: 37%;
+  top: 24%;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+  padding-bottom: 3rem;
+  width: 90vw;
+  height: auto;
+}
+
+.gallery-item{
+  position: relative;
+  flex: 1 0 22rem;
+  margin: 1rem;
+  cursor: pointer;
+  width: 29vw;
+  height: auto;
+}
+.gallery-image{
+  width: 26vw;
+  height: 26vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 26vw;
+  height: 26vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item-info{
+  display: none;
 }
